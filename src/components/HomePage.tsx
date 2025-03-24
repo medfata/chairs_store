@@ -19,7 +19,6 @@ export default function HomePageContent() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         </div>
         
         <div className="relative z-10 section-container min-h-[80vh] flex flex-col justify-center">
@@ -52,7 +51,7 @@ export default function HomePageContent() {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all"></div>
+                <div className="absolute inset-0 bg-black group-hover:bg-opacity-20 transition-all" style={{ opacity: 0.2 }}></div>
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h3 className="text-2xl font-bold text-white mb-2">{t('collections.chairs.title')}</h3>
@@ -72,7 +71,7 @@ export default function HomePageContent() {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all"></div>
+                <div className="absolute inset-0 bg-black group-hover:bg-opacity-20 transition-all" style={{ opacity: 0.2 }}></div>
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h3 className="text-2xl font-bold text-white mb-2">{t('collections.chairPieces.title')}</h3>
