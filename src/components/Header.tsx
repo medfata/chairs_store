@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { FiMenu, FiShoppingCart } from 'react-icons/fi'
+import { FiMenu } from 'react-icons/fi'
 import { useLanguage } from '../context/LanguageContext'
 
 export default function Header() {
