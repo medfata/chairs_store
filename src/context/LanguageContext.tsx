@@ -59,19 +59,24 @@ const translations: Translations = {
     'nav.contact': 'Contact',
     
     // Hero Section
+    'hero.tagline': 'COLLECTION DE CHAISES PREMIUM',
     'hero.title': 'Élevez Votre Espace avec des Chaises Premium',
     'hero.description': 'Découvrez notre collection de chaises et pièces détachées artisanales qui allient confort, style et durabilité.',
     'hero.button.shop': 'Acheter des Chaises',
     'hero.button.explore': 'Explorer Notre Collections',
+    'hero.button.contact': 'Nous Contacter',
     
     // Collections Section
     'collections.title': 'Nos Collections',
+    'collections.subtitle': 'Découvrez nos collections soigneusement sélectionnées pour répondre à tous vos besoins en matière de sièges.',
     'collections.singleChairs.description': 'Conçues pour le confort et le style',
     'collections.chairPacks.description': 'Ensembles coordonnés pour votre espace',
     'collections.accessories.description': 'Composants pour personnalisation et réparation',
     'collections.viewCollection': 'Voir la Collection',
     
     // Featured Products
+    'featuredProducts.title': 'Produits Vedettes',
+    'featuredProducts.viewDetails': 'Voir les détails',
     'featured.title': 'Produits Vedettes',
     'featured.subtitle': 'Nos designs les plus populaires, fabriqués avec des matériaux premium pour un confort et un style durables.',
     'featured.chair1.title': 'Chaise de Bureau Ergonomique',
@@ -82,12 +87,22 @@ const translations: Translations = {
     
     // Benefits Section
     'benefits.title': 'Pourquoi Nous Choisir',
+    'benefits.subtitle': 'Nous nous efforçons de fournir la meilleure expérience à nos clients.',
     'benefits.quality.title': 'Qualité Premium',
     'benefits.quality.description': 'Nos chaises sont fabriquées avec des matériaux de haute qualité pour assurer durabilité et confort pendant des années.',
     'benefits.shipping.title': 'Livraison Gratuite',
     'benefits.shipping.description': 'Profitez de la livraison gratuite sur toutes les commandes au Maroc.',
     'benefits.warranty.title': 'Garantie de 5 ans',
     'benefits.warranty.description': 'Chaque produit est livré avec une garantie complète de 5 ans pour votre tranquillité d\'esprit.',
+    
+    // Testimonials Section
+    'testimonials.title': 'Ce que disent nos clients',
+    'testimonials.subtitle': 'Ne prenez pas simplement notre parole. Lisez ce que nos clients satisfaits ont à dire.',
+    
+    // CTA Section
+    'cta.title': 'Prêt à transformer votre espace ?',
+    'cta.description': 'Parcourez notre collection aujourd\'hui et trouvez la chaise parfaite pour vos besoins.',
+    'cta.button': 'Acheter maintenant',
     
     // Newsletter Section
     'newsletter.title': 'Rejoignez Notre Newsletter',
@@ -152,19 +167,24 @@ const translations: Translations = {
     'nav.contact': 'Contact',
     
     // Hero Section
+    'hero.tagline': 'PREMIUM CHAIR COLLECTION',
     'hero.title': 'Elevate Your Space with Premium Chairs',
     'hero.description': 'Discover our collection of handcrafted chairs and chair pieces that combine comfort, style, and durability.',
     'hero.button.shop': 'Shop Chairs',
-    'hero.button.explore': 'Explore Chair Pieces',
+    'hero.button.explore': 'Explore Our Collections',
+    'hero.button.contact': 'Contact Us',
     
     // Collections Section
     'collections.title': 'Our Collections',
+    'collections.subtitle': 'Discover our carefully curated collections designed to meet all your seating needs.',
     'collections.singleChairs.description': 'Designed for comfort and style',
     'collections.chairPacks.description': 'Coordinated sets for your space',
     'collections.accessories.description': 'Components for customization and repair',
     'collections.viewCollection': 'View Collection',
     
     // Featured Products
+    'featuredProducts.title': 'Featured Products',
+    'featuredProducts.viewDetails': 'View Details',
     'featured.title': 'Featured Products',
     'featured.subtitle': 'Our most popular designs, crafted with premium materials for lasting comfort and style.',
     'featured.chair1.title': 'Ergonomic Office Chair',
@@ -175,12 +195,22 @@ const translations: Translations = {
     
     // Benefits Section
     'benefits.title': 'Why Choose Us',
+    'benefits.subtitle': 'We strive to provide the best experience for our customers.',
     'benefits.quality.title': 'Premium Quality',
     'benefits.quality.description': 'Our chairs are crafted with high-quality materials to ensure durability and comfort for years to come.',
     'benefits.shipping.title': 'Free Shipping',
     'benefits.shipping.description': 'Enjoy free shipping on all orders within Morocco.',
     'benefits.warranty.title': '5-Year Warranty',
     'benefits.warranty.description': 'Each product comes with a comprehensive 5-year warranty for your peace of mind.',
+    
+    // Testimonials Section
+    'testimonials.title': 'What Our Customers Say',
+    'testimonials.subtitle': 'Don\'t just take our word for it. Read what our satisfied customers have to say.',
+    
+    // CTA Section
+    'cta.title': 'Ready to transform your space?',
+    'cta.description': 'Browse our collection today and find the perfect chair for your needs.',
+    'cta.button': 'Shop Now',
     
     // Newsletter Section
     'newsletter.title': 'Join Our Newsletter',

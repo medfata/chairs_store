@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">ChairCraft</h3>
+            <h3 className="text-lg font-semibold mb-4">Service de Bureau</h3>
             <p className="text-gray-300 text-sm">
               {t('footer.about')}
             </p>
@@ -28,13 +28,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/chairs" className="text-gray-300 hover:text-white text-sm">
-                  {t('nav.chairs')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/chair-pieces" className="text-gray-300 hover:text-white text-sm">
-                  {t('nav.chairPieces')}
+                <Link href="/products" className="text-gray-300 hover:text-white text-sm">
+                  {t('nav.products')}
                 </Link>
               </li>
               <li>
@@ -45,47 +40,18 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Customer Service */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{t('footer.customerService')}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/shipping" className="text-gray-300 hover:text-white text-sm">
-                  {t('footer.shipping')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/returns" className="text-gray-300 hover:text-white text-sm">
-                  {t('footer.returns')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/warranty" className="text-gray-300 hover:text-white text-sm">
-                  {t('footer.warranty')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/faq" className="text-gray-300 hover:text-white text-sm">
-                  {t('footer.faq')}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">{t('footer.contactUs')}</h3>
             <address className="not-italic text-gray-300 text-sm">
-              <p>123 Chair Street</p>
-              <p>Furniture District</p>
-              <p>Email: info@chaircraft.com</p>
-              <p>Phone: (123) 456-7890</p>
+              <p>Rabat, Morocco</p>
+              <p>Phone: +212624828155</p>
             </address>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
-          <p>© {new Date().getFullYear()} ChairCraft. {t('footer.rights')}</p>
+          <p>© {new Date().getFullYear()} Service de Bureau. {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

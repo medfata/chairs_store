@@ -28,7 +28,7 @@ export default function Header() {
                   priority
                 />
               </div>
-              <span className="text-xl font-bold text-black">ChairCraft</span>
+              <span className="text-xl font-bold text-black">Service de Bureau</span>
             </Link>
           </div>
 
