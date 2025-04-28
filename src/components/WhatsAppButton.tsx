@@ -5,7 +5,7 @@ import { useLanguage } from '../context/LanguageContext';
 export default function WhatsAppButton() {
   const { t } = useLanguage();
   const whatsappNumbers = [
-    "+212 624-828155", // First number
+    "+212624828155", // First number
     // Add more numbers here as needed
   ];
 

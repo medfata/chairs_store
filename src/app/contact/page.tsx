@@ -12,7 +12,7 @@ export default function ContactPage() {
     message: ''
   });
 
-  const whatsappNumber = "+212 624-828155"; // Updated WhatsApp number
+  const whatsappNumber = "+212624828155"; // Updated WhatsApp number
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
