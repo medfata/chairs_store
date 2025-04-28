@@ -26,26 +26,50 @@ interface Translations {
 // Translations object
 const translations: Translations = {
   fr: {
+    // WhatsApp Button
+    'whatsapp.buttonLabel': 'Contactez-nous sur WhatsApp',
+    'whatsapp.defaultMessage': 'Bonjour, je voudrais en savoir plus sur vos produits.',
+
+    // Contact Page
+    'contact.title': 'Contactez-Nous',
+    'contact.description': 'Vous avez des questions ? Nous aimerions avoir de vos nouvelles. Envoyez-nous un message et nous vous répondrons dès que possible.',
+    'contact.form.name': 'Nom',
+    'contact.form.namePlaceholder': 'Votre nom',
+    'contact.form.email': 'Email',
+    'contact.form.emailPlaceholder': 'votre@email.com',
+    'contact.form.phone': 'Téléphone',
+    'contact.form.phonePlaceholder': '+212 XXX-XXXXXX',
+    'contact.form.message': 'Message',
+    'contact.form.messagePlaceholder': 'Votre message ici...',
+    'contact.form.submit': 'Envoyer le Message',
+    'contact.info.title': 'Autres Façons de Nous Contacter',
+
+    // Chair Pieces Page
+    'chairPieces.title': 'Notre Collection de Pièces de Chaise',
+    'chairPieces.description': 'Découvrez notre sélection de pièces de chaise de haute qualité pour la réparation, la personnalisation ou les projets DIY.',
+
+    // Chairs Page
+    'chairs.title': 'Notre Collection de Chaises',
+    'chairs.description': 'Découvrez notre collection soigneusement sélectionnée de chaises premium, conçues pour le confort et le style.',
+    'chairs.addToCart': 'Ajouter au Panier',
+
     // Header
     'nav.home': 'Accueil',
-    'nav.chairs': 'Chaises',
-    'nav.chairPieces': 'Pièces de Chaise',
+    'nav.products': 'Produits',
     'nav.contact': 'Contact',
     
     // Hero Section
     'hero.title': 'Élevez Votre Espace avec des Chaises Premium',
     'hero.description': 'Découvrez notre collection de chaises et pièces détachées artisanales qui allient confort, style et durabilité.',
     'hero.button.shop': 'Acheter des Chaises',
-    'hero.button.explore': 'Explorer les Pièces de Chaise',
+    'hero.button.explore': 'Explorer Notre Collections',
     
     // Collections Section
     'collections.title': 'Nos Collections',
-    'collections.chairs.title': 'Chaises Premium',
-    'collections.chairs.description': 'Conçues pour le confort et le style',
-    'collections.chairs.button': 'Voir la Collection',
-    'collections.chairPieces.title': 'Pièces de Chaise',
-    'collections.chairPieces.description': 'Composants pour personnalisation et réparation',
-    'collections.chairPieces.button': 'Voir la Collection',
+    'collections.singleChairs.description': 'Conçues pour le confort et le style',
+    'collections.chairPacks.description': 'Ensembles coordonnés pour votre espace',
+    'collections.accessories.description': 'Composants pour personnalisation et réparation',
+    'collections.viewCollection': 'Voir la Collection',
     
     // Featured Products
     'featured.title': 'Produits Vedettes',
@@ -84,13 +108,47 @@ const translations: Translations = {
     
     // Language Toggle
     'language.fr': 'FR',
-    'language.en': 'EN'
+    'language.en': 'EN',
+
+    // Products Page
+    'products.title': 'Nos Produits',
+    'products.description': 'Découvrez notre collection premium de chaises, packs de chaises et accessoires.',
+    'products.filter.all': 'Tous les Produits',
+    'products.filter.singleChairs': 'Chaises Individuelles',
+    'products.filter.chairPacks': 'Packs de Chaises',
+    'products.filter.accessories': 'Accessoires',
   },
   en: {
+    // WhatsApp Button
+    'whatsapp.buttonLabel': 'Contact us on WhatsApp',
+    'whatsapp.defaultMessage': 'Hi, I would like to know more about your products.',
+
+    // Contact Page
+    'contact.title': 'Contact Us',
+    'contact.description': 'Have questions? We’d love to hear from you. Send us a message and we’ll respond as soon as possible.',
+    'contact.form.name': 'Name',
+    'contact.form.namePlaceholder': 'Your name',
+    'contact.form.email': 'Email',
+    'contact.form.emailPlaceholder': 'your@email.com',
+    'contact.form.phone': 'Phone',
+    'contact.form.phonePlaceholder': '+212 XXX-XXXXXX',
+    'contact.form.message': 'Message',
+    'contact.form.messagePlaceholder': 'Your message here...',
+    'contact.form.submit': 'Send Message',
+    'contact.info.title': 'Other Ways to Contact Us',
+
+    // Chair Pieces Page
+    'chairPieces.title': 'Our Chair Pieces Collection',
+    'chairPieces.description': 'Explore our selection of high-quality chair pieces for repair, customization, or DIY projects.',
+
+    // Chairs Page
+    'chairs.title': 'Our Chair Collection',
+    'chairs.description': 'Discover our carefully curated collection of premium chairs, designed for both comfort and style.',
+    'chairs.addToCart': 'Add to Cart',
+
     // Header
     'nav.home': 'Home',
-    'nav.chairs': 'Chairs',
-    'nav.chairPieces': 'Chair Pieces',
+    'nav.products': 'Products',
     'nav.contact': 'Contact',
     
     // Hero Section
@@ -101,12 +159,10 @@ const translations: Translations = {
     
     // Collections Section
     'collections.title': 'Our Collections',
-    'collections.chairs.title': 'Premium Chairs',
-    'collections.chairs.description': 'Designed for comfort and style',
-    'collections.chairs.button': 'View Collection',
-    'collections.chairPieces.title': 'Chair Pieces',
-    'collections.chairPieces.description': 'Components for customization and repair',
-    'collections.chairPieces.button': 'View Collection',
+    'collections.singleChairs.description': 'Designed for comfort and style',
+    'collections.chairPacks.description': 'Coordinated sets for your space',
+    'collections.accessories.description': 'Components for customization and repair',
+    'collections.viewCollection': 'View Collection',
     
     // Featured Products
     'featured.title': 'Featured Products',
@@ -145,7 +201,15 @@ const translations: Translations = {
     
     // Language Toggle
     'language.fr': 'FR',
-    'language.en': 'EN'
+    'language.en': 'EN',
+
+    // Products Page
+    'products.title': 'Our Products',
+    'products.description': 'Discover our premium collection of chairs, chair packs, and accessories.',
+    'products.filter.all': 'All Products',
+    'products.filter.singleChairs': 'Single Chairs',
+    'products.filter.chairPacks': 'Chair Packs',
+    'products.filter.accessories': 'Accessories',
   }
 };
 

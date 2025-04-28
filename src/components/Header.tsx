@@ -37,11 +37,8 @@ export default function Header() {
             <Link href="/" className="text-black hover:text-gray-600 px-3 py-2 text-sm font-medium">
               {t('nav.home')}
             </Link>
-            <Link href="/chairs" className="text-black hover:text-gray-600 px-3 py-2 text-sm font-medium">
-              {t('nav.chairs')}
-            </Link>
-            <Link href="/chair-pieces" className="text-black hover:text-gray-600 px-3 py-2 text-sm font-medium">
-              {t('nav.chairPieces')}
+            <Link href="/products" className="text-black hover:text-gray-600 px-3 py-2 text-sm font-medium">
+              {t('nav.products')}
             </Link>
             <Link href="/contact" className="text-black hover:text-gray-600 px-3 py-2 text-sm font-medium">
               {t('nav.contact')}

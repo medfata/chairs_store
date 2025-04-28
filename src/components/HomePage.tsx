@@ -3,12 +3,13 @@
 import Image from "next/image";
 import Link from 'next/link';
 import { useLanguage } from '../context/LanguageContext';
+import WhatsAppButton from './WhatsAppButton';
 
 export default function HomePageContent() {
   const { t } = useLanguage();
   
   return (
-    <>
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-white">
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -28,7 +29,7 @@ export default function HomePageContent() {
               {t('hero.description')}
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/chair-pieces" className="border-2 text-black px-6 py-2 rounded-md bg-white hover:text-black transition-colors">
+              <Link href="/products" className="border-2 text-black px-6 py-2 rounded-md bg-white hover:text-black transition-colors">
                 {t('hero.button.explore')}
               </Link>
             </div>
@@ -41,43 +42,63 @@ export default function HomePageContent() {
         <div className="section-container">
           <h2 className="heading-lg text-center mb-16">{t('collections.title')}</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Chairs Collection */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Single Chairs Collection */}
             <div className="relative group overflow-hidden rounded-lg">
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="/images/chair-collection.avif"
-                  alt="Chairs Collection"
+                  src="/images/single_chairs/Chaise de Bureau Ergonomique  Accoudoirs 3D.jpeg"
+                  alt="Single Chairs Collection"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black group-hover:bg-opacity-20 transition-all" style={{ opacity: 0.2 }}></div>
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="text-2xl font-bold text-white mb-2">{t('collections.chairs.title')}</h3>
-                <p className="text-white mb-4">{t('collections.chairs.description')}</p>
-                <Link href="/chairs" className="inline-block bg-white text-black px-6 py-2 rounded-md hover:bg-gray-100 transition-colors">
-                  {t('collections.chairs.button')}
+                <h3 className="text-2xl font-bold text-white mb-2">{t('products.filter.singleChairs')}</h3>
+                <p className="text-white mb-4">{t('collections.singleChairs.description')}</p>
+                <Link href="/products?collection=single_chairs" className="inline-block bg-white text-black px-6 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                  {t('collections.viewCollection')}
                 </Link>
               </div>
             </div>
             
-            {/* Chair Pieces Collection */}
+            {/* Chair Packs Collection */}
             <div className="relative group overflow-hidden rounded-lg">
               <div className="aspect-[4/3] relative">
                 <Image
-                  src="/images/chair-pieces-collection.jpg"
-                  alt="Chair Pieces Collection"
+                  src="/images/pack_of_chairs/Noir.jpeg"
+                  alt="Chair Packs Collection"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black group-hover:bg-opacity-20 transition-all" style={{ opacity: 0.2 }}></div>
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h3 className="text-2xl font-bold text-white mb-2">{t('collections.chairPieces.title')}</h3>
-                <p className="text-white mb-4">{t('collections.chairPieces.description')}</p>
-                <Link href="/chair-pieces" className="inline-block bg-white text-black px-6 py-2 rounded-md hover:bg-gray-100 transition-colors">
-                  {t('collections.chairPieces.button')}
+                <h3 className="text-2xl font-bold text-white mb-2">{t('products.filter.chairPacks')}</h3>
+                <p className="text-white mb-4">{t('collections.chairPacks.description')}</p>
+                <Link href="/products?collection=pack_of_chairs" className="inline-block bg-white text-black px-6 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                  {t('collections.viewCollection')}
+                </Link>
+              </div>
+            </div>
+            
+            {/* Accessories Collection */}
+            <div className="relative group overflow-hidden rounded-lg">
+              <div className="aspect-[4/3] relative">
+                <Image
+                  src="/images/accessories/Vérin à gaz chromé pour chaise 180 DH.jpeg"
+                  alt="Chair Accessories Collection"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black group-hover:bg-opacity-20 transition-all" style={{ opacity: 0.2 }}></div>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-2xl font-bold text-white mb-2">{t('products.filter.accessories')}</h3>
+                <p className="text-white mb-4">{t('collections.accessories.description')}</p>
+                <Link href="/products?collection=accessories" className="inline-block bg-white text-black px-6 py-2 rounded-md hover:bg-gray-100 transition-colors">
+                  {t('collections.viewCollection')}
                 </Link>
               </div>
             </div>
@@ -183,28 +204,9 @@ export default function HomePageContent() {
         </div>
       </section>
       
-      {/* Newsletter Section */}
-      <section className="bg-black text-white py-20">
-        <div className="section-container">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="heading-lg mb-4">{t('newsletter.title')}</h2>
-            <p className="text-gray-300 mb-8">
-              {t('newsletter.description')}
-            </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder={t('newsletter.placeholder')}
-                className="flex-grow px-4 py-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-white"
-                required
-              />
-              <button type="submit" className="bg-white text-black px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors">
-                {t('newsletter.button')}
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </>
+
+
+      <WhatsAppButton />
+    </div>
   );
-} 
+}
