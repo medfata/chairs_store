@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import Image from "next/image";
 import { useLanguage } from '../../context/LanguageContext';
 import WhatsAppButton from '../../components/WhatsAppButton';
@@ -18,7 +18,17 @@ interface Product {
   collection: CollectionType;
 }
 
-export default function ProductsPage() {
+// Loading component
+function LoadingState() {
+  return (
+    <div className="flex justify-center items-center h-64">
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-black"></div>
+    </div>
+  );
+}
+
+// Main content component
+function ProductsContent() {
   const { t } = useLanguage();
   const searchParams = useSearchParams();
   const collectionParam = searchParams.get('collection') as CollectionType | null;
@@ -187,7 +197,7 @@ export default function ProductsPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-white">
+    <>
       {/* Hero Section */}
       <section className="relative bg-gray-50 py-16">
         <div className="section-container">
@@ -223,9 +233,7 @@ export default function ProductsPage() {
       <section className="py-12 bg-white">
         <div className="section-container">
           {isLoading ? (
-            <div className="flex justify-center items-center h-64">
-              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-black"></div>
-            </div>
+            <LoadingState />
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredProducts.map((product) => (
@@ -251,6 +259,17 @@ export default function ProductsPage() {
           )}
         </div>
       </section>
+    </>
+  );
+}
+
+// Main page component
+export default function ProductsPage() {
+  return (
+    <main className="min-h-screen bg-white">
+      <Suspense fallback={<LoadingState />}>
+        <ProductsContent />
+      </Suspense>
       <WhatsAppButton />
     </main>
   );
