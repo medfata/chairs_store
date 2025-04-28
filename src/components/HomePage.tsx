@@ -275,7 +275,7 @@ export default function HomePageContent() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-700 mb-8 italic">"{testimonial.text}"</p>
+                <p className="text-gray-700 mb-8 italic">&ldquo;{testimonial.text}&rdquo;</p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gray-300 rounded-full mr-4 flex items-center justify-center text-white text-xl font-bold">
                     {testimonial.name.charAt(0)}
