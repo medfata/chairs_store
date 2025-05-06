@@ -13,6 +13,11 @@ interface Product {
   requiresFallbackImage?: boolean;
 }
 
+// Error interface to improve error handling
+interface ApiError extends Error {
+  status?: number;
+}
+
 // Create a JWT client using environment variables
 const getAuthClient = () => {
   if (!process.env.GOOGLE_CLIENT_EMAIL || !process.env.GOOGLE_PRIVATE_KEY || !process.env.GOOGLE_SHEET_ID) {
@@ -37,10 +42,9 @@ const getAuthClient = () => {
 export async function GET() {
   try {
     const client = getAuthClient();
-    const sheets = google.sheets({ 
-      version: 'v4', 
-      auth: client as any // Using type assertion to fix TypeScript error
-    });
+    // Using type casting for compatibility with googleapis
+    // @ts-expect-error - The JWT client is compatible but TypeScript doesn't recognize it
+    const sheets = google.sheets({ version: 'v4', auth: client });
     
     // First, attempt to get the spreadsheet metadata to check if it exists
     const spreadsheet = await sheets.spreadsheets.get({
@@ -111,23 +115,24 @@ export async function GET() {
     }).filter(Boolean) as Product[];
     
     return NextResponse.json({ products });
-  } catch (error: any) {
+  } catch (error) {
     console.error('Error fetching products from Google Sheets:', error);
     
     // Provide more specific error messages
     let errorMessage = 'Failed to fetch products from Google Sheets';
+    const apiError = error as ApiError;
     
-    if (error.status === 404) {
+    if (apiError.status === 404) {
       errorMessage = 'Google Sheet not found. Please check your GOOGLE_SHEET_ID.';
-    } else if (error.status === 403) {
+    } else if (apiError.status === 403) {
       errorMessage = 'Access denied to Google Sheet. Make sure you\'ve shared it with your service account email.';
-    } else if (error.message) {
-      errorMessage = error.message;
+    } else if (apiError instanceof Error && apiError.message) {
+      errorMessage = apiError.message;
     }
     
     return NextResponse.json(
       { error: errorMessage },
-      { status: error.status || 500 }
+      { status: apiError.status || 500 }
     );
   }
 }

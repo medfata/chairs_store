@@ -81,6 +81,7 @@ export const getFallbackImage = (
     return FALLBACK_IMAGES[collection] || FALLBACK_IMAGES.default;
   } catch (error) {
     // If any error occurs (like file not found), use the data URL
+    console.error('Error getting fallback image:', error);
     return PLACEHOLDER_DATA_URL;
   }
 }; 
