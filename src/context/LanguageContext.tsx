@@ -133,7 +133,7 @@ const translations: Translations = {
     'products.filter.chairPacks': 'Packs de Chaises',
     'products.filter.accessories': 'Accessoires',
     'products.filter.desks': 'Bureaux',
-    'products.filter.longSeats': 'Sofas and Armchairs',
+    'products.filter.longSeats': 'Banquettes',
   },
   en: {
     // WhatsApp Button
@@ -243,7 +243,7 @@ const translations: Translations = {
     'products.filter.chairPacks': 'Chair Packs',
     'products.filter.accessories': 'Accessories',
     'products.filter.desks': 'Desks',
-    'products.filter.longSeats': 'Sofas and Armchairs',
+    'products.filter.longSeats': 'Armchairs',
   }
 };
 
